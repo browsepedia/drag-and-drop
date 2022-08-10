@@ -119,3 +119,10 @@ For Angular version less that 14 you have to use the classic way of injecting `B
 
 1. `service.isDragging$`, which is an `Observable<boolean>` that indicates weather an element is being dragged.
 2. `service.data$` which is an `Observable<T>` where T is the data type of the value passed to the `[bpDrag]` directive on the element that is being dragged.
+
+#### State classes
+
+There are a few state classes that are automatically set on the `[bpDropzone]` element, depending on the state of the dragging mechanism.
+
+1. `.bp-dragging-over` is set on the container which you are currently dragging over and in which the placeholder is visible.
+2. `.bp-dragging-active` is set on all dropzones which are not disabled when an element is being dragged.
