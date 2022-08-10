@@ -1,0 +1,27 @@
+<div class="app-root">
+  <div>
+    <div
+      class="container-toolbox"
+      [bpDrag]="emptyContainer"
+      appDropEffect="copy"
+    >
+      Drag new container into middle layout
+    </div>
+
+    <div>Dragging item data: {{ draggingItem$ | async | json }}</div>
+    <div>Is Dragging: {{ isDragging$ | async }}</div>
+  </div>
+
+  <div
+    class="dropzone-children dropzone"
+    bpDropzone
+    (bpDrop)="onContainerDropped()"
+  >
+    <div bpDropPlaceholder class="placeholder"></div>
+
+    <app-dropzone
+      [container]="container"
+      *ngFor="let container of containers"
+    ></app-dropzone>
+  </div>
+</div>

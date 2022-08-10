@@ -1,0 +1,40 @@
+.dropzone {
+  min-height: 120px;
+  padding: 16px;
+  border: 1px solid silver;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropzone-children {
+  display: flex;
+  min-height: 120px;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.placeholder {
+  height: 120px;
+  padding: 16px;
+  border: 1px dashed silver;
+}
+
+.container-toolbox {
+  padding: 16px;
+  cursor: pointer;
+  background-color: cadetblue;
+}
+
+.app-root {
+  display: flex;
+  gap: 16px;
+}
+
+.bp-dragging-active {
+  background-color: rgba(0, 0, 100, 0.25);
+}
+
+.bp-dragging-over {
+  background-color: rgba(0, 190, 0, 0.3);
+}

@@ -1,0 +1,9 @@
+<div class="dropzone" appDropEffect="copy">
+  <div>{{ container.title }}</div>
+  <div class="dropzone-children" (bpDrop)="onSectionDrop($event)" bpDropzone>
+    <div bpDropPlaceholder class="placeholder"></div>
+    <ng-container *ngFor="let childSection of container?.children">
+      <app-dropzone [container]="childSection"> </app-dropzone>
+    </ng-container>
+  </div>
+</div>
