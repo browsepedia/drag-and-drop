@@ -1,14 +1,14 @@
 {
   "name": "@browsepedia/drag-and-drop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/browsepedia/drag-and-drop",
   "repository": {
     "type": "git",
     "url": "https://github.com/browsepedia/drag-and-drop"
   },
   "peerDependencies": {
-    "@angular/common": "^11.x.x || ^12.x.x || ^13.x.x || ^14.x.x",
-    "@angular/core": "^11.x.x || ^12.x.x || ^13.x.x || ^14.x.x"
+    "@angular/common": "^11.x.x || ^12.x.x || ^13.x.x || ^14.x.x || ^15.x.x",
+    "@angular/core": "^11.x.x || ^12.x.x || ^13.x.x || ^14.x.x || ^15.x.x"
   },
   "dependencies": {
     "tslib": "^2.3.0"

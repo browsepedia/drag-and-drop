@@ -3,7 +3,8 @@ import { Observable } from 'rxjs';
 import { BpDragService } from './drag.service';
 
 export const getIsDragging = (): Observable<boolean> => {
-  if (VERSION.major !== '14') {
+  const version = parseInt(VERSION.major);
+  if (version < 14) {
     throw new Error(
       `You cannot use the @inject() function on Angular versions < 13. 
       Inject BpDragService in your component and use service.isDragging$`
@@ -14,7 +15,8 @@ export const getIsDragging = (): Observable<boolean> => {
 };
 
 export const getDraggingItemData = <T>(): Observable<T> => {
-  if (VERSION.major !== '14') {
+  const version = parseInt(VERSION.major);
+  if (version < 14) {
     throw new Error(
       `You cannot use the @inject() function on Angular versions < 13. 
       Inject BpDragService in your component and use service.data$`
