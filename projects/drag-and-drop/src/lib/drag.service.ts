@@ -91,6 +91,9 @@ export class BpDragService<T> {
     if (dropzone && dropzone !== this._dropzone) {
       this.removePlaceholderFromDOM(this._dropzone);
       this.setActiveDropzone(dropzone);
+    } else if (!dropzone && this._dropzone) {
+      this.removePlaceholderFromDOM(this._dropzone);
+      this.clearActiveDropzone();
     } else {
       this.checkAndUpdatePlaceholderPosition(event);
     }
